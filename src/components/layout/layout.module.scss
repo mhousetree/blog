@@ -9,10 +9,33 @@
     background-color: $light;
 }
 
+main {
+    animation: fadeIn 0.1s ease 0s 1 normal;
+    -webkit-animation: fadeIn 0.5s ease 0s 1 normal;
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @-webkit-keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
 .global-wrapper {
     width: var(--contentWidth);
     margin: 0 auto;
-    header, footer {
+    header,
+    footer {
         text-align: center;
     }
     footer {
@@ -20,10 +43,10 @@
     }
     a {
         color: $blue;
-        transition: .2s;
+        transition: 0.2s;
         &:hover {
             background-color: lighten($blue, 37%);
-            transition: .2s;
+            transition: 0.2s;
         }
     }
 }

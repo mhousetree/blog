@@ -16,12 +16,36 @@
   background-color: #fff;
 }
 
+main {
+  animation: fadeIn 0.1s ease 0s 1 normal;
+  -webkit-animation: fadeIn 0.5s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .global-wrapper {
   width: var(--contentWidth);
   margin: 0 auto;
 }
 
-.global-wrapper header, .global-wrapper footer {
+.global-wrapper header,
+.global-wrapper footer {
   text-align: center;
 }
 
@@ -31,14 +55,14 @@
 
 .global-wrapper a {
   color: #6290C8;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .global-wrapper a:hover {
   background-color: #eef3f9;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .global-header {

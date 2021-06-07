@@ -10453,6 +10453,11 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
+use-lazyload-ref@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/use-lazyload-ref/-/use-lazyload-ref-0.1.4.tgz#59dd8bd2b1795cfb7852201fe506634874675b17"
+  integrity sha512-TpIRxz+OWaMpdS56OBVS9Pl7OtcFa9feA1n8C9M2D002RN5cP2bf4eq9HtwH1a/lHSI38WW135SRIJO8A9L7Gw==
+
 use@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"

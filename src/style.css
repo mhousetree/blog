@@ -1,0 +1,12 @@
+html body {
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html.wf-active body {
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+/*# sourceMappingURL=style.css.map */

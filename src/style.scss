@@ -1,0 +1,11 @@
+html {
+    body {
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    &.wf-active body {
+        opacity: 1;
+        transition: 0.3s;
+    }
+}

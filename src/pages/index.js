@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
+import useLazyLoadRef from 'use-lazyload-ref'
 import moment from "moment"
 
 import Seo from "../components/seo/seo"
@@ -47,6 +48,7 @@ const IndexPage = ({ location }) => {
         gcms: { posts },
     } = useStaticQuery(pageQuery);
     const siteTitle = siteMetadata.title || `Title`
+    const [ref, hasLoaded] = useLazyLoadRef()
 
     return (
         <Layout location={location} title={siteTitle}>
@@ -57,13 +59,12 @@ const IndexPage = ({ location }) => {
                     <article key={slug}>
                         <Link to={`/posts/${slug}`}>
                             <div>
-                                <img src={post.category.defaultImage.url} alt={post.category.name}></img>
+                                <img ref={ref} data-src={post.category.defaultImage.url} alt={post.category.name}></img>
                                 <span>
                                     <Link to={`/categories/${post.category.slug}`}>
                                         {post.category.name}
                                     </Link>
                                 </span>
-
                             </div>
                             <div>
                                 <p>{post.date ? moment(post.date).format(`YYYY/MM/DD`) : moment(post.updatedAt)}</p>

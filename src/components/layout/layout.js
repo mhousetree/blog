@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
 
 import "destyle.css"
+import "../../style.css"
 import * as styles from "./layout.module.css"
 
 export const pageQuery = graphql`
