@@ -1,0 +1,10 @@
+:root {
+  --contentWidth: 960px;
+}
+
+@media screen and (max-width: 1280px) {
+  :root {
+    --contentWidth: 80%;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

@@ -1,0 +1,77 @@
+:root {
+  --contentWidth: 960px;
+}
+
+@media screen and (max-width: 1280px) {
+  :root {
+    --contentWidth: 80%;
+  }
+}
+
+:root {
+  font-size: 16px;
+  font-family: nobel, ryo-gothic-plusn, sans-serif;
+  font-weight: 400;
+  color: #2B2D42;
+  background-color: #fff;
+}
+
+.global-wrapper {
+  width: var(--contentWidth);
+  margin: 0 auto;
+}
+
+.global-wrapper header, .global-wrapper footer {
+  text-align: center;
+}
+
+.global-wrapper footer {
+  margin: 2rem;
+}
+
+.global-wrapper a {
+  color: #6290C8;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.global-wrapper a:hover {
+  background-color: #eef3f9;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.global-header {
+  padding: 3rem 0 1rem;
+  font-size: 1.3rem;
+}
+
+.global-header h1 {
+  margin: 0 auto 2rem;
+  font-size: 2rem;
+  border: none;
+}
+
+.global-header h1 a {
+  color: #2B2D42;
+}
+
+.global-header h1 a:hover {
+  background-color: transparent;
+}
+
+.global-header ul {
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.global-header ul a {
+  color: #6290C8;
+}
+/*# sourceMappingURL=layout.module.css.map */

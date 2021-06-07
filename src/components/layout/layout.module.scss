@@ -1,0 +1,54 @@
+@import "../../responsive.scss";
+@import "../../variables.scss";
+
+:root {
+    font-size: 16px;
+    font-family: nobel, ryo-gothic-plusn, sans-serif;
+    font-weight: 400;
+    color: $dark;
+    background-color: $light;
+}
+
+.global-wrapper {
+    width: var(--contentWidth);
+    margin: 0 auto;
+    header, footer {
+        text-align: center;
+    }
+    footer {
+        margin: 2rem;
+    }
+    a {
+        color: $blue;
+        transition: .2s;
+        &:hover {
+            background-color: lighten($blue, 37%);
+            transition: .2s;
+        }
+    }
+}
+
+.global-header {
+    padding: 3rem 0 1rem;
+    font-size: 1.3rem;
+    h1 {
+        margin: 0 auto 2rem;
+        font-size: 2rem;
+        border: none;
+        a {
+            color: $dark;
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+    ul {
+        margin: 0 auto;
+        width: fit-content;
+        display: flex;
+        gap: 1rem;
+        a {
+            color: $blue;
+        }
+    }
+}

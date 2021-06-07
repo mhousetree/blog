@@ -1,0 +1,82 @@
+@import "../../variables.scss";
+
+.section-heading {
+    margin: 2rem auto;
+    width: fit-content;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 .5rem .2rem;
+    border-bottom: 2px solid $red;
+}
+
+.posts-wrapper {
+    article {
+        margin-bottom: 1rem;
+        > a {
+            display: flex;
+            justify-content: space-between;
+            color: $dark;
+            padding: 10px;
+            border-radius: 1rem;
+        }
+        div:first-of-type {
+            width: 30%;
+            position: relative;
+            img {
+                width: 100%;
+                padding: 20px 30px 15px;
+                box-sizing: border-box;
+                background-color: $light;
+                border-radius: .5rem;
+            }
+            span {
+                position: absolute;
+                padding: 0.2rem 0.5rem;
+                top: 0;
+                left: 0;
+                background-color: $red;
+                color: $light;
+                border-radius: .5rem 0 3px 0;
+                a {
+                    display: block;
+                    padding: 0;
+                    color: $light;
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+        div:last-of-type {
+            width: 68%;
+            padding: .5rem 0;
+            p {
+                margin-bottom: .5rem;
+            }
+            h2 {
+                font-size: 1.1rem;
+                font-weight: 500;
+                margin-bottom: .5rem;
+            }
+            ul {
+                display: flex;
+                gap: .5rem;
+                li {
+                    a {
+                        color: $dark;
+                        padding: .1rem .3rem;
+                        border-radius: 5px;
+                        &:hover {
+                            color: $blue;
+                            background-color: lighten($blue, 39.3%);
+                        }
+                        &::before {
+                            color: $blue;
+                            content: "# ";
+                        }
+                        }
+                }
+            }
+        }
+    }
+}
