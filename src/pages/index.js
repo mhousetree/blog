@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery, Link } from 'gatsby'
-import useLazyLoadRef from 'use-lazyload-ref'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import moment from "moment"
 
 import Seo from "../components/seo/seo"
@@ -48,7 +48,6 @@ const IndexPage = ({ location }) => {
         gcms: { posts },
     } = useStaticQuery(pageQuery);
     const siteTitle = siteMetadata.title || `Title`
-    const [ref, hasLoaded] = useLazyLoadRef()
 
     return (
         <Layout location={location} title={siteTitle}>
@@ -59,7 +58,7 @@ const IndexPage = ({ location }) => {
                     <article key={slug}>
                         <Link to={`/posts/${slug}`}>
                             <div>
-                                <img ref={ref} data-src={post.category.defaultImage.url} alt={post.category.name}></img>
+                                <LazyLoadImage src={post.category.defaultImage.url} alt={post.category.name} />
                                 <span>
                                     <Link to={`/categories/${post.category.slug}`}>
                                         {post.category.name}
